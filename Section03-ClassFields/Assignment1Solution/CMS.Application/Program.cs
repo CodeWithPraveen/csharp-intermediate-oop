@@ -12,6 +12,10 @@ namespace CMS.Application
             Staff staff = new Staff();
 
             Course computerScience = new Course();
+            computerScience.CourseId = 201;
+            computerScience.CourseName = "ComputerScience";
+            Console.WriteLine(computerScience.CourseId);
+            Console.WriteLine(computerScience.CourseName);
             
             // Field assignment
             student.FirstName = "John";

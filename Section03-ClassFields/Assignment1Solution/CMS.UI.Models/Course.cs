@@ -4,6 +4,7 @@ namespace CMS.UI.Models
     {
         public int CourseId;
         public string CourseName;
+
         public static int MaxSubjects = 8;
     }
 }

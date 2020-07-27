@@ -7,29 +7,34 @@ namespace CMS.UI.Models
         public int CourseId;
         public string CourseName;
         public static int MaxSubjects = 8;
-
-        private List<CourseSubject> subjects = null;
-
+        private List<CourseSubject> subjects = new List<CourseSubject>();
+        
         public List<CourseSubject> Subjects
         {
-            get { return subjects; }
-            private set { subjects  = value; }
+            get
+            {
+                return subjects;
+            }
+
+            private set
+            {
+                subjects = value;
+            }
         }
 
-        
         public void AddSubject(CourseSubject subject)
         {
             subjects.Add(subject);
         }
 
-        public void RemoveSubject(CourseSubject subject)
+        public void AddSubject(List<CourseSubject> subjectCollection)
         {
-            subjects.Remove(subject);
+            subjects.AddRange(subjectCollection);
         }
 
-        public void AddSubject(List<CourseSubject> subjectsList)
+        public void RemoveSubject(CourseSubject subject)
         {
-            subjects.AddRange(subjectsList);
+            Subjects.Remove(subject);
         }
     }
 }

@@ -11,8 +11,6 @@ namespace CMS.Application
             Staff staff = new Staff();
             
             Course computerScience = new Course();
-            
-            
         }
     }
 }
